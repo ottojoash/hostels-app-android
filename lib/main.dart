@@ -1,3 +1,6 @@
+import 'dart:_http';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hostels_app/Screens/home.dart';
@@ -47,7 +50,22 @@ ThemeData theme = ThemeData(
   visualDensity: VisualDensity.adaptivePlatformDensity,
 );
 
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          ((X509Certificate cert, String host, int port) {
+        final isValidHost = host == "apps.murageh.co.ke";
+        // Allowing multiple hosts
+        // final isValidHost = host == "api.my_app" || host == "my_second_host";
+        return isValidHost;
+      });
+  }
+}
+
 Future main() async {
+  HttpOverrides.global = new MyHttpOverrides();
   await dotenv.load(fileName: ".env");
   runApp(MyApp());
 }

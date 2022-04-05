@@ -26,16 +26,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void updateRegNo(newRegNo) {
     _regNo = newRegNo;
-    // setState(() {
-    //   _regNo = newRegNo;
-    // });
   }
 
   void updatePassword(newPassword) {
     _password = newPassword;
-    // setState(() {
-    //   _password = newPassword;
-    // });
   }
 
   void updateLoading(bool isLoading) {

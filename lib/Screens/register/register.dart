@@ -88,7 +88,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           "study_year": _studyYear,
           "study_semester": _studySemester,
         })
-        .then((student) => {saveStudent(student, context)})
+        .then((student) => {saveStudent(student, context, redirect: true)})
         .catchError((error) => setError(error.toString()));
   }
 
