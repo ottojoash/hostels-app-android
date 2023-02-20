@@ -26,4 +26,3 @@ Profile Page               |  Payment Receipt Page
 ![](screenshots/home_3.jpg)|![](screenshots/receipt_1.jpg)|
 
 
-`By Murageh - Feb 2022`
