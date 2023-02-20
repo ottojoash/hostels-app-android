@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart' as badge;
 import 'package:badges/badges.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -378,7 +379,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 )),
                                           ]),
                                         ),
-                                        trailing: Badge(
+                                        trailing: badge.Badge(
                                           toAnimate: false,
                                           shape: BadgeShape.square,
                                           badgeColor:
@@ -656,7 +657,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                               ]),
                                             ),
-                                            trailing: Badge(
+                                            trailing: badge.Badge(
                                               toAnimate: false,
                                               shape: BadgeShape.square,
                                               badgeColor: Colors.green,
