@@ -9,7 +9,12 @@ import 'package:http/http.dart' as http;
 import 'models/RoomModel.dart';
 import 'models/StudentModel.dart';
 
-String baseUrl = dotenv.get('BASE_URL', fallback: '');
+String baseUrl = dotenv.get('BASE_URL' , fallback: '');
+
+//final url = Uri.parse('https://portifilo.000webhostapp.com/hostels-backend-main/');
+//final response = await http.get(url);
+
+///hostels-backend-main/bootstrap.php', fallback: '192.168.195.27:3306');
 
 Future<Student> login(
     {String regNo = '',
